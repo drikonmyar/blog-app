@@ -1,5 +1,6 @@
 package com.backend.blog.payload;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.validation.constraints.*;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -18,6 +19,7 @@ public class UserDto {
     private String email;
     @NotEmpty
     @Size(min = 3, max = 10, message = "Password must be min of 3 chars and max of 10 chars")
+    @JsonIgnore
     private String password;
     @NotEmpty
     private String about;
