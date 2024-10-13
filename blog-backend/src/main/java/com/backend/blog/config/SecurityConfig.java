@@ -47,10 +47,6 @@ public class SecurityConfig {
         return http.build();
     }
 
-//    protected void configure(AuthenticationManagerBuilder auth) throws Exception{
-//        auth.userDetailsService(this.customUserDetailsService).passwordEncoder(passwordEncoder());
-//    }
-
     @Bean
     public PasswordEncoder passwordEncoder(){
         return new BCryptPasswordEncoder();
